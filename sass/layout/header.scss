@@ -1,0 +1,25 @@
+.header{
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-violet, 0.8), rgba($color-violet-red, 0.8)), url('../img/appart.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    &__logo-box{
+        position: absolute;
+        top: 2.4rem;
+        left: 2.4rem;
+    }
+    &__logo{
+        height: 13rem;
+    }
+    
+    &__title_box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    /*animation: zoomBackground 60s;*/
+}

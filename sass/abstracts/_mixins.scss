@@ -1,0 +1,19 @@
+@mixin clearfix {
+    &::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+@mixin spread($gutter, $columns) {
+    $multiplier: $columns - 1;
+    $width: calc((100% - #{$gutter}*#{$multiplier}) / #{$columns});
+    float: left;
+    width: $width;
+}
+
+@mixin area($gutter, $columns) {
+    $multiplier: $columns - 1;
+    width: calc(((100% - #{$gutter}*#{$multiplier}) / #{$columns}) * 1);
+}

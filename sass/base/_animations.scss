@@ -1,0 +1,49 @@
+@keyframes zoomBackground {
+    0%{
+        background-size: 100%;
+    }
+    50%{
+        background-size: 150%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+
+@keyframes moveInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    50%{
+        transform: translateY(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInTop {
+    0%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    50%{
+        transform: translateY(-20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInTopButton {
+    0%{
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

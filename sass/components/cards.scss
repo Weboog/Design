@@ -1,0 +1,116 @@
+.card{
+
+    perspective: 150rem;
+    position: relative;
+    height: 50rem;
+    &__side{
+        color: $color-white;
+        transition: all .8s ease;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1rem 3rem rgba($color: #000000, $alpha: 0.1);
+        overflow: hidden;
+        &--front{
+            background-color: $color-white;
+        }
+        &--back{
+            transform: rotateY(180deg);
+            &--1{
+                background-image: linear-gradient(to bottom right, $color-blue-sky, $color-blue-cadet);
+            }
+            &--2{
+                background-image: linear-gradient(to bottom right, $color-orange, $color-orange-red);
+            }
+            &--3{
+                background-image: linear-gradient(to bottom right, $color-green-shine, $color-green);
+            }
+        }
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    &__title{
+        position: absolute;
+        top: 11.5rem;
+        right: 1rem;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        padding: 1rem;
+        font-weight: 600;
+        text-align: right;
+        width: 60%;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1{
+            background-image: linear-gradient(to bottom right, rgba($color-blue-sky, 0.8), rgba($color-blue-cadet, 0.8));
+        }
+        &--2{
+            background-image: linear-gradient(to bottom right, rgba($color-orange, 0.8), rgba($color-orange-red, 0.8));
+        }
+        &--3{
+            background-image: linear-gradient(to bottom right, rgba($color-green-shine, 0.8), rgba($color-green, 0.8));
+        }
+    }
+    &__picture{
+        background-size: cover;
+        height: 20rem;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        background-blend-mode: screen;
+        &--1{
+            background-image: linear-gradient(to bottom right, $color-blue-sky, $color-blue-cadet),  url(../../img/appart-sea.jpg);
+        }
+        &--2{
+            background-image: linear-gradient(to bottom right, $color-orange-red, $color-orange),  url(../../img/appart-center.jpg);
+        }
+        &--3{
+            background-image: linear-gradient(to bottom right, $color-green, $color-green-shine),  url(../../img/appart-outdoor.jpg);
+        }
+    }
+    &__details{
+        padding: 3rem;
+        ul{
+            margin: 0 auto;
+            width: 70%;
+            color: $color-grey-text;
+            font-size: 1.5rem;
+            li{
+                text-align: center;
+                padding: 1rem;
+                list-style: none;
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light;
+                }
+            }
+        }
+    }
+    &_cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__price-box{
+        margin-bottom: 8rem;
+    }
+    &__price-only{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    &__price-val{
+        font-weight: 100;
+        font-size: 4rem;
+    }
+}
